@@ -1,0 +1,8 @@
+2024-06-01 08:00,Toronto,Vancouver,450.00
+2024-06-02 09:00,Toronto,Montreal,200.00
+2024-06-03 10:00,Vancouver,Calgary,300.00
+2024-06-04 11:00,Montreal,Ottawa,150.00
+2024-06-05 12:00,Ottawa,Toronto,250.00
+2024-06-06 13:00,Calgary,Edmonton,200.00
+2024-06-07 14:00,Edmonton,Winnipeg,350.00
+2024-06-08 15:00,Winnipeg,Saskatoon,180.00
