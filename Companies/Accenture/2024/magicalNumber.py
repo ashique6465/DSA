@@ -1,12 +1,18 @@
-def findMagicalNumber(n):
+def magicalNo(n):
     count = 0
-    for i in range(1,n):
-        binary= bin(i)[2:]
-        changed_diget = ''.join('1' if ch == '0' else '2' for ch in binary)
-        sum_of_digt = sum(int(ch) for ch in changed_diget)
-
-        if sum_of_digt % 2 != 0:
+    for i in range(n):
+        binary = bin(i)[2:]
+        changed = ''
+        for c in binary:
+            if c == '0':
+                changed += '1'
+            else :
+                changed += '2'
+        sum_of_digit =0
+        for c in changed:
+            sum_of_digit += int(c)
+        if sum_of_digit % 2 != 0:
             count +=1
     return count
-n = 4
-print(findMagicalNumber(n))
+n = int(input("Enter the n: "))
+print(magicalNo(n))
