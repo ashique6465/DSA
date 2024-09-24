@@ -14,6 +14,6 @@ def cal_paren(n):
             stack.pop()
     backtrack(0,0)
     return res
-    
+   
 n = int(input())
 print(cal_paren(n))
