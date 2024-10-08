@@ -38,6 +38,53 @@ class BinarySearchTree:
             else:
                 return True
         return False
+    def BFS(self):
+        current_node = self.root
+        queue = []
+        result = []
+        queue.append(current_node)
+        while len(queue) > 0:
+            current_node = queue.pop(0)
+            result.append(current_node.value)
+            if current_node.left is not None:
+                queue.append(current_node.left)
+            if current_node.right is not None:
+                queue.append(current_node.right)
+        return result
+    
+    def DFS_preorder(self):
+        result = []
+        def Traverse(current_node):
+            result.append(current_node.value)
+            if current_node.left is not None:
+                Traverse(current_node.left)
+            if current_node.right is not None:
+                Traverse(current_node.right)
+        Traverse(self.root)
+        return result
+    
+    def DFS_postorder(self):
+        result = []
+        def Traverse(current_node):
+            if current_node.left is not None:
+                Traverse(current_node.left)
+            if current_node.right is not None:
+                Traverse(current_node.right)
+            result.append(current_node.value)
+        Traverse(self.root)
+        return result
+    def DFS_inorder(self):
+        result = []
+        def Traverse(current_node):
+            if current_node.left is not None:
+                Traverse(current_node.left)
+            result.append(current_node.value)
+            if current_node.right is not None:
+                Traverse(current_node.right)
+        Traverse(self.root)
+        return result
+
+
 
         
 my_tree = BinarySearchTree() 
@@ -48,7 +95,8 @@ my_tree.insert(18)
 my_tree.insert(27)
 my_tree.insert(52)
 my_tree.insert(82)
-print(my_tree.contains(17))
+
+print(my_tree.DFS_inorder())
 # print(my_tree.root.value)
 # print(my_tree.root.left.value)
 # print(my_tree.root.right.value)
