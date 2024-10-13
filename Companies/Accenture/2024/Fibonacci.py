@@ -8,5 +8,5 @@ def findFibonacci(n):
         fib.append(fib[-1] + fib[-2])
     return fib
 
-n = int(input("Enter the number: "))
-print(findFibonacci(n))
+# n = int(input("Enter the number: "))
+print(findFibonacci(5))
